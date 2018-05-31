@@ -49,6 +49,12 @@ else
 	brew install cask 
 fi
 
+if type_exists 'awscli'; then
+	e_success "AWS CLI installed"
+else
+	brew install awscli
+fi
+
 # installation need confirmation
 seek_confirmation "Install pyenv to manage python environments?"
 if is_confirmed; then
