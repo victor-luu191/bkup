@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source $HOME/Library/init/utils.sh
+source utils.sh
 
 e_header "Installations"
 # install brew
