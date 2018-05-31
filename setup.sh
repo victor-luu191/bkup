@@ -2,6 +2,7 @@
 
 source $HOME/Library/init/utils.sh
 
+e_header "Installations"
 # install brew
 if type_exists 'brew'; then
 	e_success "brew already installed"
@@ -25,8 +26,12 @@ fi
 # 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # fi
 
-echo "Installing wget..."
-brew install wget
+if type_exists 'wget'; then
+	e_success "wget already installed"
+else
+	echo "Installing wget..."
+	brew install wget
+fi
 
 if type_exists 'tree'; then
 	e_success "tree already installed"
