@@ -2,7 +2,7 @@
 
 source utils.sh
 
-e_header "Installations"
+e_header "Basic Installations"
 # install brew
 if type_exists 'brew'; then
 	e_success "brew already installed"
@@ -55,6 +55,19 @@ else
 	brew install awscli
 fi
 
+# if type_exists 'iterm2'; then
+# 	e_success "iTerm2 already installed"
+# else
+# 	echo "Installing iTerm2..."
+# 	brew cask install iterm2
+# fi
+
+if  type_exists 'htop'; then
+	e_success "htop already installed"
+else
+	brew install htop
+fi
+
 # installation need confirmation
 seek_confirmation "Install pyenv to manage python environments?"
 if is_confirmed; then
@@ -69,3 +82,14 @@ if is_confirmed; then
 else
 	e_arrow "Nothing installed"
 fi
+
+## turn on for Python installations
+# e_header "Python installations"
+# echo "pyenv install anaconda3-5.1.0"
+# pyenv install anaconda3-5.1.0
+
+# echo "pyenv install 3.6.5"
+# pyenv install 3.6.5
+
+# echo "pyenv install 2.7.15"
+# pyenv install 2.7.15
