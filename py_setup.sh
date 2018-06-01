@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source utils.sh
+
 e_header "Python installations"
 
 echo "installing Python interpreters..."
@@ -34,3 +36,6 @@ pyenv activate ipython2
 pip install ipykernel
 python -m ipykernel install --user
 pyenv deactivate
+
+echo "set PATH priority for diff environments"
+pyenv global 3.6.5 2.7.15 jupyter3 ipython2
