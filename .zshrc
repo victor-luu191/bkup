@@ -1,8 +1,16 @@
 # If you come from bash you might have to change your $PATH.
- export PATH=$HOME/bin:/usr/local/bin:$PATH
+ export PATH="$HOME/.pyenv/shims/anaconda:$HOME/bin:/usr/local/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/gfg/.oh-my-zsh
+
+# Path to projects and virtual envs
+export WORKON_HOME=~/.ve
+export PROJECT_HOME=~/projects
+
+# Initialize pyenv
+eval "$(pyenv init -)"
+#pyenv virtualenvwrapper_lazy
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -59,7 +67,7 @@ ZSH_THEME="amuse"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git colored-man colorize pip python brew osx zsh-syntax-highlighting aws
+  git colored-man colorize zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
