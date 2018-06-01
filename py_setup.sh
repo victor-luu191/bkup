@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# NOT USE, as jupyter notebooks cannot import modules after installed 
 source utils.sh
 
 e_header "Python installations"
