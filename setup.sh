@@ -33,6 +33,10 @@ else
 	brew install wget
 fi
 
+brew install pyenv
+brew install pyenv-virtualenv
+brew install pyenv-virtualenvwrapper
+
 if type_exists 'tree'; then
 	e_success "tree already installed"
 else
@@ -69,12 +73,6 @@ else
 fi
 
 # installation need confirmation
-seek_confirmation "Install pyenv to manage python environments?"
-if is_confirmed; then
-	brew install pyenv
-else
-	e_arrow "Nothing installed"
-fi
 
 seek_confirmation "Install silver searcher, a quick and dirty way to search through any file structure for a key word or phrase? Use common flag --context to print out the lines before and after the key phrase."
 if is_confirmed; then
@@ -82,14 +80,3 @@ if is_confirmed; then
 else
 	e_arrow "Nothing installed"
 fi
-
-## turn on for Python installations
-# e_header "Python installations"
-# echo "pyenv install anaconda3-5.1.0"
-# pyenv install anaconda3-5.1.0
-
-# echo "pyenv install 3.6.5"
-# pyenv install 3.6.5
-
-# echo "pyenv install 2.7.15"
-# pyenv install 2.7.15
