@@ -151,3 +151,7 @@ function to_install() {
   done
   echo "${remain[@]}"
 }
+
+upper() {
+echo "$1" | tr '[a-z]' '[A-Z]'
+}
